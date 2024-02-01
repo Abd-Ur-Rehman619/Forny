@@ -4,7 +4,7 @@ import Home from "./Pages/Home";
 import Root from "./Pages/Root";
 import PageNotFound from "./Pages/PageNotFound";
 import Contact from "./Pages/Contact";
-import Signup from "./Pages/Signup";
+import Signup from "./Pages/signup/Signup";
 import Login from "./Pages/Login";
 import About from "./Pages/About";
 const router = createBrowserRouter([
