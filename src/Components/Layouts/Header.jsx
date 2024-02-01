@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
-
+import { TextField } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import Icon from "../../assets/icon.png";
+import Cart from "../../assets/Cart.png";
+import Wishlist from "../../assets/Wishlist.png";
 export default function Header() {
   return (
     <>
@@ -17,20 +21,41 @@ export default function Header() {
             <Link to="/about" className="hover:text-gray-300">
               About
             </Link>
-          </nav>
-
-          <div className="md:flex items-center">
-            <input
-              type="text"
-              placeholder="Search"
-              className="bg-[#F5F5F5] text-white p-2 rounded-md focus:outline-none"
-            />
-
             <Link to="/signup" className="ml-4 hover:text-gray-300">
               SignUp
             </Link>
             <Link to="/login" className="ml-2 hover:text-gray-300">
               Login
+            </Link>
+          </nav>
+
+          <div className="md:flex items-center">
+            <TextField
+              hiddenLabel
+              size={"small"}
+              className="bg-[#F5F5F5]"
+              placeholder="What are you looking for?"
+              InputProps={{
+                endAdornment: (
+                  <IconButton>
+                    <img
+                      src={Icon}
+                      alt="Custom Icon"
+                      style={{ width: "24px", height: "24px" }}
+                    />
+                  </IconButton>
+                ),
+              }}
+            />
+            <Link to="/cart" className="ml-4 hover:text-gray-300">
+              <IconButton>
+                <img src={Cart} alt="Custom Icon" />
+              </IconButton>
+            </Link>
+            <Link to="/wishlist" className="ml-2 hover:text-gray-300">
+              <IconButton>
+                <img src={Wishlist} alt="Custom Icon" />
+              </IconButton>
             </Link>
           </div>
         </div>
