@@ -1,7 +1,9 @@
+import Signup from "./signup/Signup";
+
 export default function Home() {
   return (
     <>
-      <div>Home</div>
+      <Signup />
     </>
   );
 }
