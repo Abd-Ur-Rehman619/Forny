@@ -29,10 +29,6 @@
   @apply text-xs;
 }
 
-.name {
-  @apply mb-5;
-}
-
 .email {
   @apply mb-5;
 }
@@ -42,31 +38,20 @@
 }
 
 .primaryBtns {
-  @apply flex flex-col;
+  @apply flex justify-between items-center;
 }
 
-.createBtn Button {
-  @apply bg-[#EA4335] justify-center text-white w-full mt-5 capitalize;
+.loginBtn Button {
+  @apply bg-[#EA4335] justify-center text-white w-24 capitalize;
 }
 
-.createBtn Button:hover {
+.loginBtn Button:hover {
   @apply bg-[#aa4137];
 }
 
-.googleBtn Button {
-  @apply text-black mt-2 border border-solid border-black  w-full justify-center items-center text-xs capitalize;
+.forgetBtn Button {
+  @apply text-[#EA4335] capitalize text-xs;
 }
-.googleBtn Button:hover {
+.forgetBtn Button:hover {
   @apply bg-slate-200;
-}
-.googleBtn Button > img {
-  @apply mr-3 w-5 h-5;
-}
-
-.footerBtn {
-  @apply mt-3;
-}
-
-.footerBtn Button {
-  @apply text-black text-opacity-45 capitalize;
 }
