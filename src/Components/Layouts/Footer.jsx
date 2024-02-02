@@ -1,14 +1,21 @@
 import { TextField } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import Send from "../../assets/send.png";
+import appStore from "../../assets/appstore.png";
+import googlePlay from "../../assets/googlePlay.png";
+import facebook from "../../assets/iconFacebook.png";
+import instagram from "../../assets/iconinstagram.png";
+import Linkedin from "../../assets/iconLinkedin.png";
+import twitter from "../../assets/iconTwitter.png";
+import qrcode from "../../assets/QrCode.png";
 export default function Footer() {
   return (
     <>
       <footer className="bg-black py-6 flex justify-center text-white">
         <div className="container grid grid-cols-5">
           <div>
-            <p>Exclusive</p>
-            <p>Subscribe</p>
+            <p className="font-bold text-2xl font-sans mb-5 mt-5">Exclusive</p>
+            <p className="font-medium text-lg font-sans mb-5 mt-5">Subscribe</p>
             <p>Get 10% off your first order</p>
 
             <TextField
@@ -29,98 +36,68 @@ export default function Footer() {
               }}
             />
           </div>
-          <div>b</div>
-          <div>c</div>
-          <div>d</div>
-          <div>e</div>
+          <div>
+            <p className="font-medium text-lg font-sans mb-5 mt-5">Support</p>
+            <p className="font-sans mb-1 mt-5">
+              111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.
+            </p>
+            <p className="font-sans mb-5 mt-5">exclusive@gmail.com</p>
+            <p className="font-sans mb-5 mt-5">+88015-88888-9999</p>
+          </div>
+          <div>
+            <p className="font-medium text-lg font-sans mb-5 mt-5">Account</p>
+            <p className="font-sans mb-5 mt-5">My Account</p>
+            <p className="font-sans mb-5 mt-5">Login / Register</p>
+            <p className="font-sans mb-5 mt-5">Cart</p>
+            <p className="font-sans mb-5 mt-5">Wishlist</p>
+            <p className="font-sans mb-5 mt-5">Shop</p>
+          </div>
+          <div>
+            <p className="font-medium text-lg font-sans mb-5 mt-5">
+              Quick Link
+            </p>
+            <p className="font-sans mb-5 mt-5">Privacy Policy</p>
+            <p className="font-sans mb-5 mt-5">Terms Of Use</p>
+            <p className="font-sans mb-5 mt-5">FAQ</p>
+            <p className="font-sans mb-5 mt-5">Contact</p>
+          </div>
+          <div>
+            <p className="font-medium text-lg font-sans mb-5 mt-5">
+              Download App
+            </p>
+            <p className="font-sans mb-5 mt-5">
+              Save $3 with App New User Only
+            </p>
+            <div className="flex  mb-5 mt-5">
+              <IconButton>
+                <img src={qrcode} alt="" />
+              </IconButton>
+              <div>
+                <IconButton>
+                  <img src={googlePlay} alt="" />
+                </IconButton>
+                <IconButton>
+                  <img src={appStore} alt="" />
+                </IconButton>
+              </div>
+            </div>
+            <div className="grid grid-cols-4  mb-5 mt-5">
+              <IconButton>
+                <img src={facebook} alt="" />
+              </IconButton>
+              <IconButton>
+                <img src={twitter} alt="" />
+              </IconButton>
+              <IconButton>
+                <img src={instagram} alt="" />
+              </IconButton>
+              <IconButton>
+                <img src={Linkedin} alt="" />
+              </IconButton>
+            </div>
+          </div>
         </div>
       </footer>
     </>
   );
-}
-
-{
-  /* <div className="flex flex-wrap justify-between">
-<div className="w-full md:w-auto">
-  <h3 className="text-xl font-bold mb-4">Company</h3>
-  <ul className="mb-4">
-    <li className="mt-2">
-      <Link to="/about" className="hover:text-gray-300">
-        About Us
-      </Link>
-    </li>
-    <li className="mt-2">
-      <Link to="/contact" className="hover:text-gray-300">
-        Contact Us
-      </Link>
-    </li>
-    <li className="mt-2">
-      <Link to="/privacy-policy" className="hover:text-gray-300">
-        Privacy Policy
-      </Link>
-    </li>
-  </ul>
-</div>
-<div className="w-full md:w-auto">
-  <h3 className="text-xl font-bold mb-4">Support</h3>
-  <ul className="mb-4">
-    <li className="mt-2">
-      <Link to="/faq" className="hover:text-gray-300">
-        FAQ
-      </Link>
-    </li>
-    <li className="mt-2">
-      <Link to="/terms-of-service" className="hover:text-gray-300">
-        Terms of Service
-      </Link>
-    </li>
-    <li className="mt-2">
-      <Link to="/refund-policy" className="hover:text-gray-300">
-        Refund Policy
-      </Link>
-    </li>
-  </ul>
-</div>
-<div className="w-full md:w-auto">
-  <h3 className="text-xl font-bold mb-4">Social</h3>
-  <ul className="mb-4">
-    <li className="mt-2">
-      <a
-        href="https://www.facebook.com"
-        target="_blank"
-        rel="noreferrer"
-        className="hover:text-gray-300"
-      >
-        Facebook
-      </a>
-    </li>
-    <li className="mt-2">
-      <a
-        href="https://www.twitter.com"
-        target="_blank"
-        rel="noreferrer"
-        className="hover:text-gray-300"
-      >
-        Twitter
-      </a>
-    </li>
-    <li className="mt-2">
-      <a
-        href="https://www.instagram.com"
-        target="_blank"
-        rel="noreferrer"
-        className="hover:text-gray-300"
-      >
-        Instagram
-      </a>
-    </li>
-  </ul>
-</div>
-</div>
-<div className="border-t border-gray-700 mt-6 pt-6">
-<p className="text-center text-sm">
-  &copy; {new Date().getFullYear()} Company Name. All rights
-  reserved.
-</p>
-</div> */
 }
