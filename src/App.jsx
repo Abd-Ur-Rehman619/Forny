@@ -5,10 +5,10 @@ import Root from "./Pages/Root";
 import PageNotFound from "./Pages/PageNotFound";
 import Contact from "./Pages/Contact";
 import Signup from "./Pages/signup/Signup";
-import Login from "./Pages/Login";
 import About from "./Pages/About";
 import Cart from "./Pages/Cart";
 import Wishlist from "./Pages/Wishlist";
+import Login from "./Pages/LogIn/Login";
 const router = createBrowserRouter([
   {
     path: "/",
