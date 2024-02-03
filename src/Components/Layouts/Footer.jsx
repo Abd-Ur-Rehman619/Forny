@@ -8,95 +8,91 @@ import instagram from "../../assets/iconinstagram.png";
 import Linkedin from "../../assets/iconLinkedin.png";
 import twitter from "../../assets/iconTwitter.png";
 import qrcode from "../../assets/QrCode.png";
+import styles from "./footer.module.css";
 export default function Footer() {
   return (
     <>
-      <footer className="bg-black py-6 flex justify-center text-white">
-        <div className="container grid grid-cols-5">
+      <footer className={styles.footer}>
+        <div className={styles.contentDiv}>
           <div>
-            <p className="font-bold text-2xl font-sans mb-5 mt-5">Exclusive</p>
-            <p className="font-medium text-lg font-sans mb-5 mt-5">Subscribe</p>
-            <p>Get 10% off your first order</p>
+            <p className={styles.forny}>Exclusive</p>
+            <p className={styles.detailHeader}>Subscribe</p>
+            <p className={styles.detailPoints}>Get 10% off your first order</p>
 
             <TextField
               hiddenLabel
               size={"small"}
-              className="bg-black outline-white border-1 placeholder-white"
+              className={styles.textfield}
               placeholder="Enter you Email"
               InputProps={{
                 endAdornment: (
                   <IconButton>
-                    <img
-                      src={Send}
-                      alt="Custom Icon"
-                      style={{ width: "24px", height: "24px" }}
-                    />
+                    <img src={Send} alt="Custom Icon" />
                   </IconButton>
                 ),
               }}
             />
           </div>
           <div>
-            <p className="font-medium text-lg font-sans mb-5 mt-5">Support</p>
+            <p className={styles.detailHeader}>Support</p>
             <p className="font-sans mb-1 mt-5">
               111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.
             </p>
-            <p className="font-sans mb-5 mt-5">exclusive@gmail.com</p>
-            <p className="font-sans mb-5 mt-5">+88015-88888-9999</p>
+            <p className="">exclusive@gmail.com</p>
+            <p className={styles.detailPoints}>+88015-88888-9999</p>
           </div>
           <div>
-            <p className="font-medium text-lg font-sans mb-5 mt-5">Account</p>
-            <p className="font-sans mb-5 mt-5">My Account</p>
-            <p className="font-sans mb-5 mt-5">Login / Register</p>
-            <p className="font-sans mb-5 mt-5">Cart</p>
-            <p className="font-sans mb-5 mt-5">Wishlist</p>
-            <p className="font-sans mb-5 mt-5">Shop</p>
+            <p className={styles.detailHeader}>Account</p>
+            <p className={styles.detailPoints}>My Account</p>
+            <p className={styles.detailPoints}>Login / Register</p>
+            <p className={styles.detailPoints}>Cart</p>
+            <p className={styles.detailPoints}>Wishlist</p>
+            <p className={styles.detailPoints}>Shop</p>
           </div>
           <div>
-            <p className="font-medium text-lg font-sans mb-5 mt-5">
-              Quick Link
-            </p>
-            <p className="font-sans mb-5 mt-5">Privacy Policy</p>
-            <p className="font-sans mb-5 mt-5">Terms Of Use</p>
-            <p className="font-sans mb-5 mt-5">FAQ</p>
-            <p className="font-sans mb-5 mt-5">Contact</p>
+            <p className={styles.detailHeader}>Quick Link</p>
+            <p className={styles.detailPoints}>Privacy Policy</p>
+            <p className={styles.detailPoints}>Terms Of Use</p>
+            <p className={styles.detailPoints}>FAQ</p>
+            <p className={styles.detailPoints}>Contact</p>
           </div>
           <div>
-            <p className="font-medium text-lg font-sans mb-5 mt-5">
-              Download App
-            </p>
-            <p className="font-sans mb-5 mt-5">
+            <p className={styles.detailHeader}>Download App</p>
+            <p className={styles.detailPoints}>
               Save $3 with App New User Only
             </p>
-            <div className="flex  mb-5 mt-5">
+            <div className={styles.downloadIcons}>
               <IconButton>
-                <img src={qrcode} alt="" />
+                <img src={qrcode} alt="qrcode" />
               </IconButton>
               <div>
                 <IconButton>
-                  <img src={googlePlay} alt="" />
+                  <img src={googlePlay} alt="googlePlay" />
                 </IconButton>
                 <IconButton>
-                  <img src={appStore} alt="" />
+                  <img src={appStore} alt="appStore" />
                 </IconButton>
               </div>
             </div>
-            <div className="grid grid-cols-4  mb-5 mt-5">
+            <div className={styles.socialIcons}>
               <IconButton>
-                <img src={facebook} alt="" />
+                <img src={facebook} alt="facebook" />
               </IconButton>
               <IconButton>
-                <img src={twitter} alt="" />
+                <img src={twitter} alt="twitter" />
               </IconButton>
               <IconButton>
-                <img src={instagram} alt="" />
+                <img src={instagram} alt="instagram" />
               </IconButton>
               <IconButton>
-                <img src={Linkedin} alt="" />
+                <img src={Linkedin} alt="Linkedin" />
               </IconButton>
             </div>
           </div>
         </div>
+        <p className="text-[#FFFFFF] m-5">
+          Copyright Rimel 2022. All right reserved
+        </p>
       </footer>
     </>
   );
