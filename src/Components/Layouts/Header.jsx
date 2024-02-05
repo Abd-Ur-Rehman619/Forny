@@ -4,7 +4,7 @@ import IconButton from "@mui/material/IconButton";
 import Icon from "../../assets/icon.png";
 import Cart from "../../assets/Cart.png";
 import Wishlist from "../../assets/Wishlist.png";
-import styles from "./header.module.css";
+import styles from "../StylingFiles/header.module.css";
 export default function Header() {
   return (
     <>

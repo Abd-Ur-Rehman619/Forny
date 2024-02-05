@@ -8,7 +8,7 @@ import instagram from "../../assets/iconinstagram.png";
 import Linkedin from "../../assets/iconLinkedin.png";
 import twitter from "../../assets/iconTwitter.png";
 import qrcode from "../../assets/QrCode.png";
-import styles from "./footer.module.css";
+import styles from "../StylingFiles/footer.module.css";
 export default function Footer() {
   return (
     <>
