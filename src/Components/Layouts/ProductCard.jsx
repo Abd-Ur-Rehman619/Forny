@@ -20,7 +20,7 @@ export default function ProductCard() {
   };
 
   return (
-    <div className="flex flex-col border border-black mb-20 w-[270px] h-[350px] relative">
+    <div className="flex flex-col  mb-20 w-[270px] h-[350px] relative">
       <div className="absolute top-1 left-1 bg-[#DB4444] text-white p-2 rounded">
         {product.discount}
       </div>

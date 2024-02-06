@@ -22,6 +22,12 @@ export default function Footer() {
             <TextField
               hiddenLabel
               size={"small"}
+              sx={{
+                border: "1px solid white",
+                borderRadius: "6px",
+                outlineColor: "white",
+                placeholder: "white",
+              }}
               className={styles.textfield}
               placeholder="Enter you Email"
               InputProps={{

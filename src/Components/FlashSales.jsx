@@ -1,16 +1,17 @@
+import DescriptionLabel from "./Layouts/DescriptionLabel";
 import ProductCard from "./Layouts/ProductCard";
 import TitleLabel from "./Layouts/TitleLabel";
 import { Button } from "@mui/material";
 
-export default function FlashSales() {
+export default function FlashSales({ titleLabel, descriptionLabel }) {
   return (
     <>
       <main className="flex flex-col gap-10">
         <div>
-          <TitleLabel>{["Today's"]}</TitleLabel>
+          <TitleLabel>{titleLabel}</TitleLabel>
         </div>
         <div>
-          <label className="text-4xl font-bold">Flash Sales</label>
+          <DescriptionLabel> {descriptionLabel} </DescriptionLabel>
         </div>
         <div className="flex flex-row">
           <ProductCard />

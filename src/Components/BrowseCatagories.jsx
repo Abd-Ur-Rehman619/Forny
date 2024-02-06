@@ -6,13 +6,14 @@ import Headphone from "../assets/Category-Headphone.png";
 import SmartWatch from "../assets/Category-SmartWatch.png";
 import TitleLabel from "./Layouts/TitleLabel";
 import BrowseCatagory from "./Layouts/BrowseCatagory";
+import DescriptionLabel from "./Layouts/DescriptionLabel";
 export default function BrowseCatagories() {
   return (
     <>
       <main className="flex flex-col gap-10">
         <TitleLabel>{["Catagories"]}</TitleLabel>
         <div>
-          <label className="text-4xl font-bold">Browse By Category</label>
+          <DescriptionLabel>Catagories</DescriptionLabel>
         </div>
         <div className="grid grid-cols-6 gap-8">
           <BrowseCatagory catagoryImg={CellPhone}>Phones</BrowseCatagory>
