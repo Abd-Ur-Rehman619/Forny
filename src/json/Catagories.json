@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "Catagory": "Women's collection"
+  },
+  {
+    "id": 2,
+    "Catagory": "Man's collection"
+  },
+  {
+    "id": 3,
+    "Catagory": "Kids collection"
+  },
+  {
+    "id": 4,
+    "Catagory": "Heels"
+  },
+  {
+    "id": 5,
+    "Catagory": "Loafers"
+  },
+  {
+    "id": 6,
+    "Catagory": "Sandals"
+  },
+  {
+    "id": 7,
+    "Catagory": "Casual"
+  },
+  {
+    "id": 8,
+    "Catagory": "Football"
+  },
+  {
+    "id": 9,
+    "Catagory": "Formal"
+  },
+  {
+    "id": 10,
+    "Catagory": "Running"
+  }
+]

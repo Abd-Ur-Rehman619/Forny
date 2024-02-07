@@ -2,8 +2,9 @@ import DescriptionLabel from "./Layouts/DescriptionLabel";
 import ProductCard from "./Layouts/ProductCard";
 import TitleLabel from "./Layouts/TitleLabel";
 import { Button } from "@mui/material";
+import shoes from "../json/Home.json";
 
-export default function FlashSales({ titleLabel, descriptionLabel }) {
+export default function FlashSales({ titleLabel, descriptionLabel, count }) {
   return (
     <>
       <main className="flex flex-col gap-10">
@@ -13,9 +14,47 @@ export default function FlashSales({ titleLabel, descriptionLabel }) {
         <div>
           <DescriptionLabel> {descriptionLabel} </DescriptionLabel>
         </div>
-        <div className="flex flex-row">
-          <ProductCard />
+        <div className="grid grid-cols-5">
+          {count === 1
+            ? shoes.flashSales.map((items) => (
+                <div key={items.id}>
+                  <ProductCard
+                    name={items.name}
+                    price={items.price}
+                    brand={items.brand}
+                    discount={items.discount}
+                    gender={items.gender}
+                    image={items.imageURL}
+                  />
+                </div>
+              ))
+            : count === 2
+            ? shoes.sellingProducts.map((items) => (
+                <div key={items.id}>
+                  <ProductCard
+                    name={items.name}
+                    price={items.price}
+                    brand={items.brand}
+                    discount={items.discount}
+                    gender={items.gender}
+                    image={items.imageURL}
+                  />
+                </div>
+              ))
+            : shoes.exploreProduct.map((items) => (
+                <div key={items.id}>
+                  <ProductCard
+                    name={items.name}
+                    price={items.price}
+                    brand={items.brand}
+                    discount={items.discount}
+                    gender={items.gender}
+                    image={items.imageURL}
+                  />
+                </div>
+              ))}
         </div>
+
         <div className="flex justify-center">
           <Button
             sx={{
