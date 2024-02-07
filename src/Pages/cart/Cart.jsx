@@ -17,10 +17,12 @@ export default function Cart() {
             <CartData />
           </tr>
         </table>
+
         <div className={styles.cartBtns}>
           <Button>Return to Shop</Button>
           <Button>Update Cart</Button>
         </div>
+
         <div className={styles.cartFooter}>
           <div className={styles.coupon}>
             <Input type="text" placeholder="Coupon Code" />
@@ -38,6 +40,7 @@ export default function Cart() {
             <p>
               Total:<span>123</span>
             </p>
+
             <div className={styles.checkoutBtn}>
               <Button>Process to Checkout</Button>
             </div>
