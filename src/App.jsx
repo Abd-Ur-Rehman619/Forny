@@ -5,8 +5,13 @@ import Root from "./Pages/Root";
 import PageNotFound from "./Pages/PageNotFound";
 import Contact from "./Pages/Contact";
 import Signup from "./Pages/signup/Signup";
+
 import Login from "./Pages/login/Login";
+
 import About from "./Pages/About";
+import Cart from "./Pages/Cart";
+import Wishlist from "./Pages/Wishlist";
+import Login from "./Pages/LogIn/Login";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +37,14 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
+        path: "/wishlist",
+        element: <Wishlist />,
       },
     ],
   },

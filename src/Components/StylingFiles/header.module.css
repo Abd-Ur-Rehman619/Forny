@@ -1,0 +1,21 @@
+.header {
+  @apply p-4 text-black border-b flex justify-center;
+}
+.dashboardDiv {
+  @apply container mx-auto flex justify-between items-center;
+}
+.navDiv {
+  @apply text-2xl font-bold;
+}
+nav {
+  @apply flex space-x-4;
+}
+.textFieldDiv {
+  @apply flex items-center;
+}
+.navLinks {
+  @apply font-semibold p-1  hover:border-b-[1px] border-black;
+}
+.cartWishLinks {
+  @apply ml-2;
+}
