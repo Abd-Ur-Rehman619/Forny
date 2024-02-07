@@ -9,7 +9,7 @@ export default function Catagories() {
             <Link
               to={`./products${item.url}`}
               key={item.id}
-              className="mb-2 text-lg font-medium"
+              className="mb-2 text-md font-medium hover:text-xl hover:text-[#DB4444]"
             >
               {item.Catagory}
             </Link>
