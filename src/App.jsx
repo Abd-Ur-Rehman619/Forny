@@ -9,7 +9,22 @@ import Signup from "./Pages/signup/Signup";
 import About from "./Pages/About";
 import Cart from "./Pages/cart/Cart.jsx";
 import Wishlist from "./Pages/Wishlist";
+
+import Login from "./Pages/LogIn/Login";
+import Products from "./Pages/Products";
+import WomenCollection from "./Pages/CatagoriesPages/WomenCollection";
+import MenCollection from "./Pages/CatagoriesPages/MenCollection";
+import KidsCollection from "./Pages/CatagoriesPages/KidsCollection";
+import Heels from "./Pages/CatagoriesPages/Heels";
+import Loafers from "./Pages/CatagoriesPages/Loafers";
+import Sandals from "./Pages/CatagoriesPages/Sandals";
+import Casual from "./Pages/CatagoriesPages/Casual";
+import Football from "./Pages/CatagoriesPages/Football";
+import Formal from "./Pages/CatagoriesPages/Formal";
+import Running from "./Pages/CatagoriesPages/Running";
+
 import Login from "./Pages/login/Login.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +58,55 @@ const router = createBrowserRouter([
       {
         path: "/wishlist",
         element: <Wishlist />,
+      },
+      {
+        path: "/products",
+        children: [
+          {
+            index: true,
+            element: <Products />,
+          },
+          {
+            path: "women",
+            element: <WomenCollection />,
+          },
+          {
+            path: "men",
+            element: <MenCollection />,
+          },
+          {
+            path: "kids",
+            element: <KidsCollection />,
+          },
+          {
+            path: "heels",
+            element: <Heels />,
+          },
+          {
+            path: "loafers",
+            element: <Loafers />,
+          },
+          {
+            path: "sandals",
+            element: <Sandals />,
+          },
+          {
+            path: "casual",
+            element: <Casual />,
+          },
+          {
+            path: "football",
+            element: <Football />,
+          },
+          {
+            path: "formal",
+            element: <Formal />,
+          },
+          {
+            path: "running",
+            element: <Running />,
+          },
+        ],
       },
     ],
   },

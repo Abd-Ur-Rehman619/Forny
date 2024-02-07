@@ -11,27 +11,35 @@ export default function NewArrivals() {
     <>
       <main className="flex flex-col gap-10">
         <div>
-          <TitleLabel>{["This Month"]}</TitleLabel>
+          <TitleLabel>{["Featured"]}</TitleLabel>
         </div>
         <div>
-          <DescriptionLabel>Best Selling Products</DescriptionLabel>
+          <DescriptionLabel>New Arrival</DescriptionLabel>
         </div>
         <div className="flex flex-row gap-10">
           <div className="relative border border-black bg-black h-[37.5rem] w-[52rem]">
             <div className="flex justify-center items-end h-full">
-              <img src={playStation} alt="playStation" />
+              <img
+                src="https://c4.wallpaperflare.com/wallpaper/816/770/388/jordan-fly-wade-nike-wallpaper-preview.jpg"
+                alt="playStation"
+              />
             </div>
             <NewArrivedDetails
-              Title={"PlayStation 5"}
+              Title={"Men’s Collections"}
               Description={
-                "Black and White version of the PS5 coming out on sale."
+                "Featured woman collections that give you another vibe."
               }
             />
           </div>
 
           <div className="flex flex-col h-[37.5rem] w-[52rem] gap-8">
             <div className="relative flex justify-end border border-black bg-black w-[52rem] h-[17.75rem]">
-              <img src={womensCollection} alt="womensCollection" />
+              <img
+                className="h-[17.75rem] w-auto"
+                src="https://us.123rf.com/450wm/imagineseven/imagineseven2303/imagineseven230302015/203585952-high-heel-women-shoes-on-a-dark-background-3d-illustration.jpg"
+                alt="womensCollection"
+              />
+
               <NewArrivedDetails
                 Title={"Women’s Collections"}
                 Description={
@@ -42,16 +50,24 @@ export default function NewArrivals() {
             <div className="flex flex-row gap-10 w-[52rem]">
               <div className="relative border border-black bg-black w-[25rem] h-[17.75rem]">
                 <div className="flex justify-center items-center h-full">
-                  <img src={woffers} alt="woffers" />
+                  <img
+                    className="h-[17.75rem] w-auto"
+                    src="https://t4.ftcdn.net/jpg/04/10/65/53/360_F_410655365_MjietOoPZAMAdqA74M6EXqRL3F8g5dHH.jpg"
+                    alt="woffers"
+                  />
                 </div>
                 <NewArrivedDetails
-                  Title={"Speakers"}
+                  Title={"White Jordens"}
                   Description={"Amazon wireless speakers"}
                 />
               </div>
               <div className="relative border border-black bg-black w-[25rem] h-[17.75rem]">
                 <div className="flex justify-center items-center h-full">
-                  <img src={Gucciperfume} alt="Gucciperfume" />
+                  <img
+                    className="h-[17.75rem] w-auto"
+                    src="https://thumbs.dreamstime.com/b/baby-yellow-sneakers-isolated-black-background-kids-fashion-shoes-146094770.jpg"
+                    alt="Gucciperfume"
+                  />
                 </div>
 
                 <NewArrivedDetails
