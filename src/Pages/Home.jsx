@@ -1,3 +1,4 @@
+
 import BrowseCatagories from "../Components/BrowseCatagories";
 import Catagories from "../Components/Catagories";
 import FlashSales from "../Components/FlashSales";
@@ -45,4 +46,5 @@ export default function Home() {
       </div>
     </>
   );
+
 }
