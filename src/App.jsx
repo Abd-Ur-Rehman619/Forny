@@ -6,12 +6,10 @@ import PageNotFound from "./Pages/PageNotFound";
 import Contact from "./Pages/Contact";
 import Signup from "./Pages/signup/Signup";
 
-import Login from "./Pages/login/Login";
-
 import About from "./Pages/About";
-import Cart from "./Pages/Cart";
+import Cart from "./Pages/cart/Cart.jsx";
 import Wishlist from "./Pages/Wishlist";
-import Login from "./Pages/LogIn/Login";
+import Login from "./Pages/login/Login.jsx";
 const router = createBrowserRouter([
   {
     path: "/",

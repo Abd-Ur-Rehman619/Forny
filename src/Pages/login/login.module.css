@@ -25,6 +25,10 @@
   @apply flex flex-col mt-6;
 }
 
+/* .inputs Input {
+  @apply border-b border-gray-500 focus:border-blue-500 outline-none;
+} */
+
 .inputs Input::placeholder {
   @apply text-xs;
 }
