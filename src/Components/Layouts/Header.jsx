@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { TextField } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import Icon from "../../assets/icon.png";
@@ -13,21 +13,46 @@ export default function Header() {
           <div className={styles.navDiv}>FORNY</div>
 
           <nav>
-            <Link to="/" className={styles.navLinks}>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? styles.activeLink : styles.navLinks
+              }
+            >
               Home
-            </Link>
-            <Link to="/contact" className={styles.navLinks}>
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive ? styles.activeLink : styles.navLinks
+              }
+            >
               Contact
-            </Link>
-            <Link to="/about" className={styles.navLinks}>
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? styles.activeLink : styles.navLinks
+              }
+            >
               About
-            </Link>
-            <Link to="/signup" className={styles.navLinks}>
+            </NavLink>
+            <NavLink
+              to="/signup"
+              className={({ isActive }) =>
+                isActive ? styles.activeLink : styles.navLinks
+              }
+            >
               SignUp
-            </Link>
-            <Link to="/login" className={styles.navLinks}>
+            </NavLink>
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                isActive ? styles.activeLink : styles.navLinks
+              }
+            >
               Login
-            </Link>
+            </NavLink>
           </nav>
 
           <div className={styles.textFieldDiv}>
