@@ -6,7 +6,11 @@ export default function Catagories() {
       <div className="pt-10 w-[15rem] pr-10 font-light border-r">
         <ul className="flex flex-col ">
           {shoes.map((item) => (
-            <Link key={item.id} className="mb-2 text-lg font-medium">
+            <Link
+              to={`./products${item.url}`}
+              key={item.id}
+              className="mb-2 text-lg font-medium"
+            >
               {item.Catagory}
             </Link>
           ))}

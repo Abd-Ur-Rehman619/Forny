@@ -55,18 +55,20 @@ export default function FlashSales({ titleLabel, descriptionLabel, count }) {
               ))}
         </div>
 
-        <div className="flex justify-center">
-          <Button
-            sx={{
-              backgroundColor: "#DB4444",
-              width: "234px",
-              height: "56px",
-              color: "white",
-            }}
-          >
-            View All Products
-          </Button>
-        </div>
+        {(count === 1 || count === 3) && (
+          <div className="flex justify-center">
+            <Button
+              sx={{
+                backgroundColor: "#DB4444",
+                width: "234px",
+                height: "56px",
+                color: "white",
+              }}
+            >
+              View All Products
+            </Button>
+          </div>
+        )}
       </main>
     </>
   );

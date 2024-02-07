@@ -1,42 +1,52 @@
 [
   {
     "id": 1,
-    "Catagory": "Women's collection"
+    "Catagory": "Women's collection",
+    "url": "/women"
   },
   {
     "id": 2,
-    "Catagory": "Man's collection"
+    "Catagory": "Man's collection",
+    "url": "/men"
   },
   {
     "id": 3,
-    "Catagory": "Kids collection"
+    "Catagory": "Kids collection",
+    "url": "/kids"
   },
   {
     "id": 4,
-    "Catagory": "Heels"
+    "Catagory": "Heels",
+    "url": "/heels"
   },
   {
     "id": 5,
-    "Catagory": "Loafers"
+    "Catagory": "Loafers",
+    "url": "/loafers"
   },
   {
     "id": 6,
-    "Catagory": "Sandals"
+    "Catagory": "Sandals",
+    "url": "/sandals"
   },
   {
     "id": 7,
-    "Catagory": "Casual"
+    "Catagory": "Casual",
+    "url": "/casual"
   },
   {
     "id": 8,
-    "Catagory": "Football"
+    "Catagory": "Football",
+    "url": "/football"
   },
   {
     "id": 9,
-    "Catagory": "Formal"
+    "Catagory": "Formal",
+    "url": "/formal"
   },
   {
     "id": 10,
-    "Catagory": "Running"
+    "Catagory": "Running",
+    "url": "/running"
   }
 ]

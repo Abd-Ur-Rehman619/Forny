@@ -3,9 +3,7 @@ import Catagories from "../Components/Catagories";
 import FlashSales from "../Components/FlashSales";
 import { ImageCarousel } from "../Components/ImageCarousel";
 import NewArrivals from "../Components/NewArrivals";
-import SellingProducts from "../Components/SellingProducts";
 import ServicesComponent from "../Components/ServicesComponent";
-// import styles from "../Components/StylingFiles/Home.module.css";
 export default function Home() {
   return (
     <>
