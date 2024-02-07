@@ -5,6 +5,9 @@ import Root from "./Pages/Root";
 import PageNotFound from "./Pages/PageNotFound";
 import Contact from "./Pages/Contact";
 import Signup from "./Pages/signup/Signup";
+
+import Login from "./Pages/login/Login";
+
 import About from "./Pages/About";
 import Cart from "./Pages/Cart";
 import Wishlist from "./Pages/Wishlist";
