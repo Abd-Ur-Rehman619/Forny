@@ -1,4 +1,3 @@
-
 import BrowseCatagories from "../Components/BrowseCatagories";
 import Catagories from "../Components/Catagories";
 import FlashSales from "../Components/FlashSales";
@@ -8,7 +7,7 @@ import ServicesComponent from "../Components/ServicesComponent";
 export default function Home() {
   return (
     <>
-      <div className="flex items-center flex-col gap-32">
+      <div className="flex items-center flex-col gap-32 h-screens">
         <div className="container flex gap-52">
           <Catagories />
           <ImageCarousel />
@@ -46,5 +45,4 @@ export default function Home() {
       </div>
     </>
   );
-
 }
