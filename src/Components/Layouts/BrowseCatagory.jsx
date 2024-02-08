@@ -1,10 +1,19 @@
-export default function BrowseCatagories({ catagoryImg, children }) {
+import { Link } from "react-router-dom";
+
+export default function BrowseCatagories({ catagoryImg, children, link }) {
   return (
     <>
-      <div className="flex flex-col justify-center items-center gap-3 h-[145px] w-[170px] border border-gray-300 rounded hover:bg-[#DB4444] hover:text-white transition-all duration-500 ease-in-out">
-        <img src={catagoryImg} alt="catagoryImg" />
-        <label className="font-medium">{children}</label>
-      </div>
+      <Link to={link} className="flex flex-col items-center group relative">
+        <img
+          className="m-2 rounded transition-transform duration-300 transform group-hover:scale-110 "
+          src={catagoryImg}
+          alt="catagoryImg"
+        />
+
+        <label className="font-medium transition-transform duration-300 transform group-hover:scale-110 group-hover:text-red-500 m-2">
+          {children}
+        </label>
+      </Link>
     </>
   );
 }

@@ -54,9 +54,11 @@ export default function ProductCard({
             <img src={view} alt="View Logo" />
           </IconButton>
         </div>
-        <div className="absolute top-1 left-1 bg-[#DB4444] text-white p-2 rounded">
-          {discount}
-        </div>
+        {discount !== "0" && (
+          <div className="absolute top-1 left-1 bg-[#DB4444] text-white p-2 rounded">
+            {`${discount}%`}
+          </div>
+        )}
       </div>
     </div>
   );

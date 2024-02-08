@@ -1,7 +1,7 @@
 export default function WomenCollection() {
   return (
     <>
-      <div>WomenCollection</div>
+      <div className="h-screen">WomenCollection</div>
     </>
   );
 }
