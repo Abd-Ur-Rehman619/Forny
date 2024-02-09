@@ -14,19 +14,25 @@ export default function ProductCard({
   image,
 }) {
   const [isLiked, setLiked] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleLikeClick = () => {
     setLiked(!isLiked);
   };
 
   return (
-    <div className="flex flex-col  mb-20 w-[270px] h-[350px] relative">
-      <div className="absolute top-1 left-1 bg-[#DB4444] text-white p-2 rounded">
-        {discount}
-      </div>
-
-      <div className="flex justify-center bg-[#F5F5F5] p-12 mb-2">
+    <div
+      className="flex flex-col  mb-20 w-[270px] h-[350px] relative"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="relative flex justify-center bg-[#F5F5F5] p-12 mb-2">
         <img className="h-36" src={image} alt="" />
+        {isHovered && (
+          <div className="absolute flex justify-center bottom-0 bg-black text-white ">
+            <button className="w-[270px] h-10">Add to Cart</button>
+          </div>
+        )}
       </div>
 
       <div className="flex justify-between items-center px-4">
@@ -48,6 +54,11 @@ export default function ProductCard({
             <img src={view} alt="View Logo" />
           </IconButton>
         </div>
+        {discount !== "0" && (
+          <div className="absolute top-1 left-1 bg-[#DB4444] text-white p-2 rounded">
+            {`${discount}%`}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -27,11 +27,14 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement: <PageNotFound />,
     children: [
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "/*",
+        element: <PageNotFound />,
       },
       {
         path: "/contact",

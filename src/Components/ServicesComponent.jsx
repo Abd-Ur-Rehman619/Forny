@@ -6,7 +6,7 @@ import MoneyBack from "../assets/MoneyBack.png";
 export default function ServicesComponent() {
   return (
     <>
-      <div className="flex flex-row justify-between gap-32">
+      <div className="grid grid-cols-3 justify-between gap-32">
         <ServicesLayout
           img={Delivery}
           title={"FREE AND FAST DELIVERY"}
