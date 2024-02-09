@@ -23,8 +23,6 @@ import Football from "./Pages/CatagoriesPages/Football";
 import Formal from "./Pages/CatagoriesPages/Formal";
 import Running from "./Pages/CatagoriesPages/Running";
 
-import Login from "./Pages/login/Login.jsx";
-
 const router = createBrowserRouter([
   {
     path: "/",
