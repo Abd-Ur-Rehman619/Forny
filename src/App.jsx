@@ -22,6 +22,7 @@ import Casual from "./Pages/CatagoriesPages/Casual";
 import Football from "./Pages/CatagoriesPages/Football";
 import Formal from "./Pages/CatagoriesPages/Formal";
 import Running from "./Pages/CatagoriesPages/Running";
+import Checkout from "./Pages/checkout/Checkout.jsx";
 
 const router = createBrowserRouter([
   {
@@ -54,7 +55,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <Cart />,
+
+        children: [
+          {
+            index: true,
+            element: <Cart />,
+          },
+          {
+            path: "checkout",
+            element: <Checkout />,
+          },
+        ],
       },
       {
         path: "/wishlist",

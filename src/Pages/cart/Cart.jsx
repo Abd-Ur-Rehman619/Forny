@@ -1,6 +1,7 @@
 import { Button, Input } from "@mui/material";
 import styles from "./Cart.module.css";
 import CartData from "./CartData";
+import { Link } from "react-router-dom";
 
 export default function Cart() {
   return (
@@ -13,9 +14,8 @@ export default function Cart() {
             <th>Quantity</th>
             <th>Subtotal</th>
           </tr>
-          <tr className={styles.tableData}>
-            <CartData />
-          </tr>
+
+          <CartData />
         </table>
 
         <div className={styles.cartBtns}>
@@ -37,12 +37,14 @@ export default function Cart() {
             <p>
               Shipping:<span>Free</span>
             </p>
-            <p>
+            <p className="border-none">
               Total:<span>123</span>
             </p>
 
             <div className={styles.checkoutBtn}>
-              <Button>Process to Checkout</Button>
+              <Link to="/cart/checkout">
+                <Button>Process to Checkout</Button>
+              </Link>
             </div>
           </div>
         </div>
