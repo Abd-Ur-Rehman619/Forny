@@ -10,7 +10,7 @@ import About from "./Pages/About";
 import Cart from "./Pages/cart/Cart.jsx";
 import Wishlist from "./Pages/Wishlist";
 
-import Login from "./Pages/LogIn/Login";
+import Login from "./Pages/login/Login.jsx";
 import Products from "./Pages/Products";
 import WomenCollection from "./Pages/CatagoriesPages/WomenCollection";
 import MenCollection from "./Pages/CatagoriesPages/MenCollection";
