@@ -1,7 +1,16 @@
+import ShowProducts from "../../Components/Layouts/ShowProducts";
+import { useProductFilter } from "../../Components/Layouts/useProductFilter";
 export default function WomenCollection() {
+  const womenCollection = useProductFilter("WOMEN");
   return (
     <>
-      <div className="h-screen">WomenCollection</div>
+      {womenCollection && (
+        <ShowProducts
+          titleLabel={"Women's Collection"}
+          descriptionLabel={"View All Women's Shoes"}
+          products={womenCollection}
+        />
+      )}
     </>
   );
 }

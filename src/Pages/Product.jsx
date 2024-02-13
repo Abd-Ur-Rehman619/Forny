@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import ProductDetails from "./Layouts/ProductDetails";
-import RelatedItems from "./Layouts/RelatedItems";
+import ProductDetails from "../Components/Layouts/ProductDetails";
+import RelatedItems from "../Components/Layouts/RelatedItems";
 import productsData from "../json/AllShoes.json";
 
 export default function Product() {

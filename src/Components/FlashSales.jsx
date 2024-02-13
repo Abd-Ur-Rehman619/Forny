@@ -3,6 +3,7 @@ import ProductCard from "./Layouts/ProductCard";
 import TitleLabel from "./Layouts/TitleLabel";
 import { Button } from "@mui/material";
 import shoes from "../json/Home.json";
+import { Link } from "react-router-dom";
 
 export default function FlashSales({ titleLabel, descriptionLabel, count }) {
   return (
@@ -60,16 +61,18 @@ export default function FlashSales({ titleLabel, descriptionLabel, count }) {
 
         {(count === 1 || count === 3) && (
           <div className="flex justify-center">
-            <Button
-              sx={{
-                backgroundColor: "#DB4444",
-                width: "234px",
-                height: "56px",
-                color: "white",
-              }}
-            >
-              View All Products
-            </Button>
+            <Link to={"/products"}>
+              <Button
+                sx={{
+                  backgroundColor: "#DB4444",
+                  width: "234px",
+                  height: "56px",
+                  color: "white",
+                }}
+              >
+                View All Products
+              </Button>
+            </Link>
           </div>
         )}
       </main>
