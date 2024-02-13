@@ -12,15 +12,13 @@ export default function Login() {
   const [error, setError] = useState("");
 
   const storedUser = JSON.parse(localStorage.getItem("users")) || [];
-  console.log(storedUser);
-  // console.log(storedUser.password);
 
   const handleLogin = () => {
-    if (
-      storedUser &&
-      storedUser.email === email &&
-      storedUser.password === password
-    ) {
+    const foundUser = storedUser.find(
+      (user) => user.email === email && user.password === password
+    );
+
+    if (foundUser) {
       navigate("/");
     } else {
       setError("Incorrect email or password");
