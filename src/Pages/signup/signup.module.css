@@ -17,7 +17,7 @@
   @apply font-bold text-xl;
 }
 
-.form p {
+.form > p {
   @apply text-xs mt-3;
 }
 
@@ -27,6 +27,9 @@
 
 .inputs Input::placeholder {
   @apply text-xs;
+}
+.inputs > p {
+  @apply text-red-600;
 }
 
 .name {
