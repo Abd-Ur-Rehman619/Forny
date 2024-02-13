@@ -27,7 +27,6 @@ export default function Login() {
 
   return (
     <>
-      <p>Testing</p>
       <div className={styles.content}>
         <div className={styles.image}>
           <img src={signupImg} alt="signup Img" />
