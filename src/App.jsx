@@ -23,7 +23,7 @@ import Football from "./Pages/CatagoriesPages/Football";
 import Formal from "./Pages/CatagoriesPages/Formal";
 import Running from "./Pages/CatagoriesPages/Running";
 import Checkout from "./Pages/checkout/Checkout.jsx";
-import Product from "./Components/Product.jsx";
+import Product from "./Pages/Product.jsx";
 
 const router = createBrowserRouter([
   {

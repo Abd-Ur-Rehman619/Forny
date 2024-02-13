@@ -41,7 +41,7 @@ export default function ProductCard({
       <div className="flex justify-between items-center px-4">
         <div>
           <p className="font-semibold">{name}</p>
-          <p className="text-[#DB4444] font-medium">{price}</p>
+          <p className="text-[#DB4444] font-medium">{`$${price}`}</p>
           <p>{brand}</p>
           <p>{gender}</p>
         </div>
