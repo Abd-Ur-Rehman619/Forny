@@ -10,7 +10,7 @@ import About from "./Pages/About";
 import Cart from "./Pages/cart/Cart.jsx";
 import Wishlist from "./Pages/Wishlist";
 
-import Login from "./Pages/LogIn/Login";
+import Login from "./Pages/login/Login.jsx";
 import Products from "./Pages/Products";
 import WomenCollection from "./Pages/CatagoriesPages/WomenCollection";
 import MenCollection from "./Pages/CatagoriesPages/MenCollection";
@@ -23,6 +23,7 @@ import Football from "./Pages/CatagoriesPages/Football";
 import Formal from "./Pages/CatagoriesPages/Formal";
 import Running from "./Pages/CatagoriesPages/Running";
 import Checkout from "./Pages/checkout/Checkout.jsx";
+import Product from "./Components/Product.jsx";
 
 const router = createBrowserRouter([
   {
@@ -117,6 +118,10 @@ const router = createBrowserRouter([
           {
             path: "running",
             element: <Running />,
+          },
+          {
+            path: ":productSlug",
+            element: <Product />,
           },
         ],
       },

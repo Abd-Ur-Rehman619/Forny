@@ -4,8 +4,10 @@ import heart from "../../assets/heart.png";
 import view from "../../assets/view.png";
 import yellow from "../../assets/heart - Copy.png";
 import { IconButton } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function ProductCard({
+  slug,
   name,
   price,
   discount,
@@ -21,7 +23,8 @@ export default function ProductCard({
   };
 
   return (
-    <div
+    <Link
+      to={`Products/${slug}`}
       className="flex flex-col  mb-20 w-[270px] h-[350px] relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -60,6 +63,6 @@ export default function ProductCard({
           </div>
         )}
       </div>
-    </div>
+    </Link>
   );
 }
