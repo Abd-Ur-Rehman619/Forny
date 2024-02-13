@@ -35,6 +35,10 @@ export default function Login() {
               <Button>Forget Password?</Button>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+          {error && <p className={styles.error}>{error}</p>}
+>>>>>>> dcee4c5f6c6d54df410728ed6fdba4cbf72a88f8
         </form>
       </div>
     </>

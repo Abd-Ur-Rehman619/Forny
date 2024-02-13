@@ -19,6 +19,7 @@ export default function FlashSales({ titleLabel, descriptionLabel, count }) {
             ? shoes.flashSales.map((items) => (
                 <div key={items.id}>
                   <ProductCard
+                    slug={items.slug}
                     name={items.name}
                     price={items.price}
                     brand={items.brand}
@@ -32,6 +33,7 @@ export default function FlashSales({ titleLabel, descriptionLabel, count }) {
             ? shoes.sellingProducts.map((items) => (
                 <div key={items.id}>
                   <ProductCard
+                    slug={items.slug}
                     name={items.name}
                     price={items.price}
                     brand={items.brand}
@@ -44,6 +46,7 @@ export default function FlashSales({ titleLabel, descriptionLabel, count }) {
             : shoes.exploreProduct.map((items) => (
                 <div key={items.id}>
                   <ProductCard
+                    slug={items.slug}
                     name={items.name}
                     price={items.price}
                     brand={items.brand}
