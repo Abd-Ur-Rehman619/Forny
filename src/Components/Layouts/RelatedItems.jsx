@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import TitleLabel from "./TitleLabel";
 import productsData from "../../json/AllShoes.json";
 import ProductCard from "./ProductCard";
+
 export default function RelatedItems({ product }) {
   const [relatedItems, setRelateditems] = useState(null);
+
   useEffect(() => {
     const prouducts = productsData.filter(
       (myProduct) => myProduct.brand === product.brand
@@ -11,6 +13,7 @@ export default function RelatedItems({ product }) {
     setRelateditems(prouducts);
   }, []);
   console.log(relatedItems);
+
   return (
     <>
       <main className="flex flex-col gap-10">

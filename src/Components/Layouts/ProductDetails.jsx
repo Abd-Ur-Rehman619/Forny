@@ -4,12 +4,15 @@ import yellow from "../../assets/heart - Copy.png";
 import delivery from "../../assets/icon-delivery.png";
 import returnIcon from "../../assets/icon-return.png";
 import { useState } from "react";
+
 export default function ProductDetails({ product }) {
   const [count, setCount] = useState(1);
   const [favorite, setFavorite] = useState(false);
+
   if (!product) {
     return <div>Loading...</div>;
   }
+
   return (
     <>
       <div className="flex items-center w-[31.25rem] h-[37.5rem] border rounded">
@@ -34,6 +37,7 @@ export default function ProductDetails({ product }) {
           <SizeButton>L</SizeButton>
           <SizeButton>XL</SizeButton>
         </div>
+
         <div className="flex m-5">
           <div className="flex items-center h-11 w-40 border border-grey-700 rounded m-2">
             <button
@@ -60,6 +64,7 @@ export default function ProductDetails({ product }) {
           <button className="bg-white hover:bg-[#DB4444] hover:text-white text-gray-800 font-semibold py-2 px-4 border  rounded shadow m-2 w-36">
             Buy Now
           </button>
+
           <button
             className="bg-white  text-gray-800 font-semibold py-2 px-4 border  rounded shadow m-2 "
             onClick={() => setFavorite(!favorite)}
@@ -67,6 +72,7 @@ export default function ProductDetails({ product }) {
             <img src={favorite ? yellow : heart} alt="Heart Logo" />
           </button>
         </div>
+
         <div className="flex flex-col  border rounded w-[30rem] m-5 ">
           <div className="flex border-b p-5">
             <img src={delivery} alt="delivery" />

@@ -7,12 +7,14 @@ import productsData from "../json/AllShoes.json";
 export default function Product() {
   const { productSlug } = useParams();
   const [product, setProduct] = useState(null);
+
   useEffect(() => {
     const foundProduct = productsData.find(
       (product) => product.slug === productSlug
     );
     setProduct(foundProduct);
   }, [productSlug]);
+
   return (
     <>
       <div className="flex items-center flex-col gap-32 h-screens">
