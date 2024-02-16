@@ -19,7 +19,7 @@
 }
 
 .cartBtns Button {
-  @apply capitalize text-black font-bold border border-solid border-gray-950 border-opacity-30 w-36 p-2 hover:bg-[#aa4137] hover:text-white;
+  @apply capitalize text-black font-bold border border-solid border-gray-950 border-opacity-30 w-36 p-2 hover:bg-[#EA4335] hover:text-white;
 }
 
 .cartFooter {

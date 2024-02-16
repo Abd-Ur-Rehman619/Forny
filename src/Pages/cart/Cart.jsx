@@ -35,7 +35,9 @@ export default function Cart() {
           </table>
 
           <div className={styles.cartBtns}>
-            <Button>Return to Shop</Button>
+            <Link to="/">
+              <Button>Return to Shop</Button>
+            </Link>
             <Button>Update Cart</Button>
           </div>
 
