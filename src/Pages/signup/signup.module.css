@@ -28,9 +28,6 @@
 .inputs Input::placeholder {
   @apply text-xs;
 }
-.inputs > p {
-  @apply text-red-600;
-}
 
 .name {
   @apply mb-5;
@@ -67,7 +64,7 @@
 }
 
 .footerBtn {
-  @apply mt-3;
+  @apply mt-5 flex justify-center items-center;
 }
 
 .footerBtn Button {

@@ -41,11 +41,11 @@ export default function ProductCard({
       <div className="flex justify-between items-center px-4">
         <div>
           <p className="font-semibold">{name}</p>
-<<<<<<< HEAD
+
           <p className="text-[#DB4444] font-medium">${price}</p>
-=======
+
           <p className="text-[#DB4444] font-medium">{`$${price}`}</p>
->>>>>>> 4338f43fce46738cb77a98d99d54626261a0e966
+
           <p>{brand}</p>
           <p>{gender}</p>
         </div>

@@ -5,9 +5,18 @@ import delivery from "../../assets/icon-delivery.png";
 import returnIcon from "../../assets/icon-return.png";
 import { useState } from "react";
 
+import { useDispatch } from "react-redux";
+import { addItem } from "../../store/cartSlice";
+
 export default function ProductDetails({ product }) {
   const [count, setCount] = useState(1);
   const [favorite, setFavorite] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const addToCartHandler = () => {
+    dispatch(addItem({ ...product, quantity: count }));
+  };
 
   if (!product) {
     return <div>Loading...</div>;
@@ -61,8 +70,14 @@ export default function ProductDetails({ product }) {
             </button>
           </div>
 
-          <button className="bg-white hover:bg-[#DB4444] hover:text-white text-gray-800 font-semibold py-2 px-4 border  rounded shadow m-2 w-36">
+          <button className="bg-[#EA4335] hover:bg-[#aa4137] hover:text-white text-white font-semibold py-2 px-4 border  rounded shadow m-2 w-36">
             Buy Now
+          </button>
+          <button
+            onClick={addToCartHandler}
+            className="bg-[#fc8941] hover:bg-[#ff7520] hover:text-white text-white font-semibold py-2 px-4 border  rounded shadow m-2 w-36"
+          >
+            Add to Cart
           </button>
 
           <button

@@ -6,6 +6,10 @@
   @apply flex items-center gap-4;
 }
 
+.productImage > img {
+  @apply w-16 h-16;
+}
+
 .quantityInput {
   @apply w-36 flex justify-center;
 }

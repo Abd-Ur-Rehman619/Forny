@@ -1,8 +1,9 @@
 import styles from "./login.module.css";
 import signupImg from "../../assets/authPic.png";
-import { Button, Input } from "@mui/material";
+import { Button, IconButton, Input, InputAdornment } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -10,8 +11,23 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const storedUser = JSON.parse(localStorage.getItem("users")) || [];
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setError("");
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+    setError("");
+  };
+
+  const handleTogglePasswordVisibility = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
 
   const handleLogin = () => {
     const foundUser = storedUser.find(
@@ -39,17 +55,39 @@ export default function Login() {
             <Input
               type="email"
               className={styles.email}
-              placeholder="Email or Phone Number"
+              placeholder="Email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleEmailChange}
             />
+            {error && (
+              <p className="text-xs p-0 relative -top-3 text-red-600">
+                {error}
+              </p>
+            )}
+
             <Input
-              type="password"
+              type={showPassword ? "text" : "password"}
               className={styles.password}
               placeholder="Password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={handlePasswordChange}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleTogglePasswordVisibility}
+                    edge="end"
+                  >
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              }
             />
+            {error && (
+              <p className="text-xs p-0 relative -top-3 text-red-600">
+                {error}
+              </p>
+            )}
           </div>
 
           <div className={styles.primaryBtns}>
@@ -61,7 +99,6 @@ export default function Login() {
               <Button>Forget Password?</Button>
             </div>
           </div>
-          {error && <p className={styles.error}>{error}</p>}
         </form>
       </div>
     </>
