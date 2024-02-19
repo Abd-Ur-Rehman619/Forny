@@ -11,7 +11,6 @@ export default function Cart() {
     return product.price * product.quantity;
   };
 
-  // Function to calculate the total subtotal of all products in the cart
   const calculateTotalSubtotal = () => {
     let totalSubtotal = 0;
     cartItems.forEach((product) => {

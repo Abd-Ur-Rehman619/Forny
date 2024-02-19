@@ -11,11 +11,14 @@ import { addItem } from "../../store/cartSlice";
 export default function ProductDetails({ product }) {
   const [count, setCount] = useState(1);
   const [favorite, setFavorite] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
 
   const dispatch = useDispatch();
 
   const addToCartHandler = () => {
-    dispatch(addItem({ ...product, quantity: 1 }));
+    dispatch(addItem({ ...product, quantity: count }));
+    setShowMessage(true);
+    setTimeout(() => setShowMessage(false), 3000);
   };
 
   if (!product) {
@@ -24,6 +27,12 @@ export default function ProductDetails({ product }) {
 
   return (
     <>
+      {showMessage && (
+        <div className="absolute top-0 left-0 right-0 bg-gray-800 text-white text-center py-2">
+          Your item has been added to the cart.
+        </div>
+      )}
+
       <div className="flex items-center w-[31.25rem] h-[37.5rem] border rounded">
         <img src={product.imageURL} alt="productImage" />
       </div>
