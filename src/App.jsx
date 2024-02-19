@@ -1,16 +1,16 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
+
 import Home from "./Pages/Home";
 import Root from "./Pages/Root";
 import PageNotFound from "./Pages/PageNotFound";
 import Contact from "./Pages/Contact";
 import Signup from "./Pages/signup/Signup";
-
-import About from "./Pages/About";
+import About from "./Pages/about/About.jsx";
 import Cart from "./Pages/cart/Cart.jsx";
 import Wishlist from "./Pages/Wishlist";
-
 import Login from "./Pages/login/Login.jsx";
+
 import Products from "./Pages/Products";
 import WomenCollection from "./Pages/CatagoriesPages/WomenCollection";
 import MenCollection from "./Pages/CatagoriesPages/MenCollection";
