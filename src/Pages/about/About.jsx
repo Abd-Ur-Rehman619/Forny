@@ -2,6 +2,7 @@ import styles from "./About.module.css";
 import storyImg from "../../assets/story-pic.png";
 import SiteInformation from "../../Components/SiteInformation";
 import ServicesComponent from "../../Components/ServicesComponent";
+import PersonsInfo from "../../Components/PersonsInfo";
 
 export default function About() {
   return (
@@ -28,11 +29,15 @@ export default function About() {
             <img src={storyImg} />
           </div>
         </div>
-        <div className="container flex justify-center mt-16">
+        <div className=" flex justify-center mt-32">
           <SiteInformation />
         </div>
 
-        <div className="container flex justify-center mt-16">
+        <div className="flex justify-center mt-32">
+          <PersonsInfo />
+        </div>
+
+        <div className="flex justify-center mt-32">
           <ServicesComponent />
         </div>
       </main>
