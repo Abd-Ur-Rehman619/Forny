@@ -1,5 +1,5 @@
 .main {
-  @apply border-2 border-solid border-red-700 flex flex-col justify-center pt-16 pb-16;
+  @apply flex flex-col justify-center pt-16 pb-16;
 }
 
 .outStory {
