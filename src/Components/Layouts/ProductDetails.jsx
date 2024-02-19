@@ -15,7 +15,7 @@ export default function ProductDetails({ product }) {
   const dispatch = useDispatch();
 
   const addToCartHandler = () => {
-    dispatch(addItem({ ...product, quantity: count }));
+    dispatch(addItem({ ...product, quantity: 1 }));
   };
 
   if (!product) {

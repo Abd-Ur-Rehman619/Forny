@@ -7,6 +7,19 @@ import { useSelector } from "react-redux";
 export default function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
 
+  const calculateProductSubtotal = (product) => {
+    return product.price * product.quantity;
+  };
+
+  // Function to calculate the total subtotal of all products in the cart
+  const calculateTotalSubtotal = () => {
+    let totalSubtotal = 0;
+    cartItems.forEach((product) => {
+      totalSubtotal += calculateProductSubtotal(product);
+    });
+    return totalSubtotal;
+  };
+
   return (
     <>
       {cartItems.length === 0 && (
@@ -49,14 +62,15 @@ export default function Cart() {
 
             <div className={styles.cartTotal}>
               <h2>Cart Total</h2>
+
               <p>
-                Subtotal:<span>123</span>
+                Subtotal:<span>${calculateTotalSubtotal()}</span>
               </p>
               <p>
                 Shipping:<span>Free</span>
               </p>
               <p className="border-none">
-                Total:<span>123</span>
+                Total:<span>${calculateTotalSubtotal()}</span>
               </p>
 
               <div className={styles.checkoutBtn}>

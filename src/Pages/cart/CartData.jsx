@@ -2,6 +2,8 @@ import styles from "./CartData.module.css";
 
 import { useDispatch, useSelector } from "react-redux";
 import { updateQuantity } from "../../store/cartSlice";
+import { removeItem } from "../../store/cartSlice";
+import { Delete } from "@mui/icons-material";
 
 export default function CartData() {
   const cartItems = useSelector((state) => state.cart.items);
@@ -21,6 +23,10 @@ export default function CartData() {
       const newQuantity = product.quantity - 1;
       dispatch(updateQuantity({ ...product, quantity: newQuantity }));
     }
+  };
+
+  const handleDelete = (product) => {
+    dispatch(removeItem(product));
   };
 
   return (
@@ -61,7 +67,15 @@ export default function CartData() {
               </div>
             </span>
 
-            <span className="mr-5">${calculateSubtotal(product)}</span>
+            <span className="mr-5 flex items-center gap-6">
+              ${calculateSubtotal(product)}
+              <span>
+                <Delete
+                  onClick={() => handleDelete(product)}
+                  className="hover:text-red-600"
+                />
+              </span>
+            </span>
           </td>
         </tr>
       ))}
