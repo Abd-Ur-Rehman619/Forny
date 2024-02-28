@@ -1,9 +1,10 @@
 import styles from "./signup.module.css";
 import signupImg from "../../assets/authPic.png";
-import { Button, Input } from "@mui/material";
+import { Button, IconButton, Input, InputAdornment } from "@mui/material";
 import googleIcon from "../../assets/Icon-Google.png";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -14,22 +15,54 @@ export default function Signup() {
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const users = JSON.parse(localStorage.getItem("users")) || [];
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+    setNameError("");
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setEmailError("");
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+    setPasswordError("");
+  };
+
+  const handleTogglePasswordVisibility = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
 
   const handleSignup = () => {
     if (!name) {
       setNameError("Name cannot be empty");
+    } else {
+      setNameError("");
+    }
+
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      setEmailError("Invalid email, email must have @");
       return;
     }
 
-    if (!email) {
-      setEmailError("Email cannot be empty");
+    if (
+      !password ||
+      !/(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}/.test(
+        password
+      )
+    ) {
+      setPasswordError(
+        "Password must have at least one uppercase, lowercase letter, one digit, one special character, and minimum 8 characters"
+      );
       return;
     }
 
-    if (!password) {
-      setPasswordError("Password cannot be empty");
+    if (!name || !email || !password) {
       return;
     }
 
@@ -62,30 +95,53 @@ export default function Signup() {
               className={styles.name}
               placeholder="Name*"
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={handleNameChange}
               required
             />
-            {nameError && <p>{nameError}</p>}
+            {nameError && (
+              <p className="text-xs p-0 relative -top-3 text-red-600">
+                {nameError}
+              </p>
+            )}
 
             <Input
               type="email"
               className={styles.email}
-              placeholder="Email or Phone Number*"
+              placeholder="Email*"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleEmailChange}
               required
             />
-            {emailError && <p className={styles.error}>{emailError}</p>}
+            {emailError && (
+              <p className="text-xs p-0 relative -top-3 text-red-600">
+                {emailError}
+              </p>
+            )}
 
             <Input
-              type="password"
+              type={showPassword ? "text" : "password"}
               className={styles.password}
               placeholder="Password*"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={handlePasswordChange}
               required
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleTogglePasswordVisibility}
+                    edge="end"
+                  >
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              }
             />
-            {passwordError && <p className={styles.error}>{passwordError}</p>}
+            {passwordError && (
+              <p className="text-xs p-0 relative -top-3 text-red-600">
+                {passwordError}
+              </p>
+            )}
           </div>
 
           <div className={styles.primaryBtns}>
@@ -102,11 +158,11 @@ export default function Signup() {
           </div>
 
           <div className={styles.footerBtn}>
-            <Button>Already have account?</Button>
-            <Button>Log in</Button>
+            <span>Already have account?</span>
+            <Link to="/login" className="text-black text-opacity-50 ml-3">
+              Log in
+            </Link>
           </div>
-
-          {/* {error && <p className={styles.error}>{error}</p>} */}
         </form>
       </div>
     </>

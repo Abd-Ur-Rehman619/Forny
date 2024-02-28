@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import shoes from "../json/Catagories.json";
+
 export default function Catagories() {
   return (
     <>

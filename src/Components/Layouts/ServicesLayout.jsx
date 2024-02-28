@@ -1,7 +1,7 @@
 export default function ServicesLayout({ img, title, description }) {
   return (
     <>
-      <div className="flex flex-col items-center gap-5">
+      <div className="flex flex-col items-center gap-5 ">
         <div>
           <img src={img} alt="img" />
         </div>

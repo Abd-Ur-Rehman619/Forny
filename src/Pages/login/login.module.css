@@ -17,7 +17,7 @@
   @apply font-bold text-xl;
 }
 
-.form p {
+.form > p {
   @apply text-xs mt-3;
 }
 
@@ -42,16 +42,9 @@
 }
 
 .loginBtn Button {
-  @apply bg-[#EA4335] justify-center text-white w-24 capitalize;
-}
-
-.loginBtn Button:hover {
-  @apply bg-[#aa4137];
+  @apply bg-[#EA4335] justify-center text-white w-24 capitalize hover:bg-[#aa4137];
 }
 
 .forgetBtn Button {
-  @apply text-[#EA4335] capitalize text-xs;
-}
-.forgetBtn Button:hover {
-  @apply bg-slate-200;
+  @apply text-[#EA4335] capitalize text-xs hover:bg-slate-200;
 }
