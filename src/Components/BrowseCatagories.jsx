@@ -1,9 +1,3 @@
-import Camera from "../assets/Category-Camera.png";
-import CellPhone from "../assets/Category-CellPhone.png";
-import Computer from "../assets/Category-Computer.png";
-import Gamepad from "../assets/Category-Gamepad.png";
-import Headphone from "../assets/Category-Headphone.png";
-import SmartWatch from "../assets/Category-SmartWatch.png";
 import TitleLabel from "./Layouts/TitleLabel";
 import BrowseCatagory from "./Layouts/BrowseCatagory";
 import DescriptionLabel from "./Layouts/DescriptionLabel";
@@ -58,7 +52,7 @@ export default function BrowseCatagories() {
           </BrowseCatagory>
           <BrowseCatagory
             catagoryImg={
-              "https://cdn.endource.com/image/b8880dcf217665e6f329687073db7245/detail/russell-and-bromley-felix-square-toe-apron-loafer.jpg?optimizer=image&class=800"
+              "https://i.pinimg.com/736x/1b/bd/ef/1bbdefc389d5179a92b31bec800ec8b8.jpg"
             }
             link={"/products/formal"}
           >

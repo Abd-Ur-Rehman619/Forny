@@ -1,9 +1,12 @@
 import styles from "./login.module.css";
 import signupImg from "../../assets/authPic.png";
 import { Button, IconButton, Input, InputAdornment } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { updateLog } from "../../store/cartSlice";
+import generateToken from "../../../helpers/generateToken";
+import { useDispatch } from "react-redux";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -12,6 +15,14 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      dispatch(updateLog());
+    }
+  }, []);
 
   const storedUser = JSON.parse(localStorage.getItem("users")) || [];
 
@@ -35,6 +46,9 @@ export default function Login() {
     );
 
     if (foundUser) {
+      const token = generateToken();
+      localStorage.setItem("token", token);
+      dispatch(updateLog());
       navigate("/");
     } else {
       setError("Incorrect email or password");
