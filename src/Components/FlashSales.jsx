@@ -15,10 +15,13 @@ export default function FlashSales({ titleLabel, descriptionLabel, count }) {
         <div>
           <DescriptionLabel> {descriptionLabel} </DescriptionLabel>
         </div>
-        <div className="grid grid-cols-5">
+        <div className="grid gap-8 justify-center items-center grid-cols-2 sm:justify-center sm:items-center md:grid-cols-3  lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           {count === 1
             ? shoes.flashSales.map((items) => (
-                <div key={items.id}>
+                <div
+                  key={items.id}
+                  className="flex flex-col  md:w-[270px] md:mx-0  relative mx-4 h-full"
+                >
                   <ProductCard
                     slug={items.slug}
                     name={items.name}
@@ -32,7 +35,10 @@ export default function FlashSales({ titleLabel, descriptionLabel, count }) {
               ))
             : count === 2
             ? shoes.sellingProducts.map((items) => (
-                <div key={items.id}>
+                <div
+                  key={items.id}
+                  className="flex flex-col   md:w-[270px] md:mx-0  relative mx-4 h-full"
+                >
                   <ProductCard
                     slug={items.slug}
                     name={items.name}
@@ -45,7 +51,10 @@ export default function FlashSales({ titleLabel, descriptionLabel, count }) {
                 </div>
               ))
             : shoes.exploreProduct.map((items) => (
-                <div key={items.id}>
+                <div
+                  key={items.id}
+                  className="flex flex-col   md:w-[270px] md:mx-0  relative mx-4 h-full"
+                >
                   <ProductCard
                     slug={items.slug}
                     name={items.name}
